@@ -84,6 +84,11 @@ def lista_candidatos(request):
         {
             'title': 'Cadastro de Candidatos',
             'Candidato': Candidato.objects.all(),
+            'nome': Candidato.nome,
+            'RG': Candidato.RG,
+            'CPF': Candidato.CPF,
+            'Endereço': Candidato.endereço,
+            'Telefone': Candidato.telefone,
             'year': datetime.now().year,
         })
     )
