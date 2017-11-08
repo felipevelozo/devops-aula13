@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Candidatos</title>
+</head>
+<body>
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Lista de cursos</h1>
+</div>
+
+<table class="table">
+    <tr><th>Nome</th><th>RG</th><th>CPF</th><th>Endereço</th><th>Telefone</th></tr>
+        {% for curso in cursos %}
+          <tr><td>{{ candidato.nome }}</td><td>{{ candidato.RG }}</td><td>{{ candidato.CPF }}</td><td>{{ candidato.endereço }}</td><td>{{ candidato.telefone }}</td></tr>
+        {% endfor %}
+</table>
+
+{% endblock %}
+</body>
+</html>
